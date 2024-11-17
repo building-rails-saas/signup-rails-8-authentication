@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "pages#show"
+  resource :signups, path: "signup", only: %w[new create]
   resource :session
   resources :passwords, param: :token
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
