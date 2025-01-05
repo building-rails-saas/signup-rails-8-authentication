@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_05_095730) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_05_102304) do
+  create_table "invitations", force: :cascade do |t|
+    t.integer "workspace_id"
+    t.integer "inviter_id"
+    t.string "email_address"
+    t.datetime "accepted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"

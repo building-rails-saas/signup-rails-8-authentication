@@ -1,0 +1,5 @@
+<%= form_with model: @invitation, url: accept_invitations_path do |f| %>
+  <%= f.email_field :email_address %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>

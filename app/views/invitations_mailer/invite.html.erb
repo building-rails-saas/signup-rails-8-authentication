@@ -1,0 +1,4 @@
+<p>
+  Here is your invitation. Click this link to
+  <%= link_to "get started", accept_invitation_url(token: @invitation.generate_token_for(:invitation)) %>.
+</p>

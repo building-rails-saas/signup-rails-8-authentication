@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resource :signups, path: "signup", only: %w[new create]
   resource :session
   resources :passwords, param: :token
+  resources :invitations, only: %w[index new create]
+  resources :accept_invitations, only: %w[new create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

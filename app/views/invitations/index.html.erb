@@ -1,0 +1,9 @@
+<ul>
+  <% @invitations.each do |invitation| %>
+    <li>
+      <%= invitation.email_address %> - <%= invitation.accepted_at %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New invitation", new_invitation_path %>
