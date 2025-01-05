@@ -26,7 +26,9 @@ class Signup
   private
 
   def create_workspace_for(user)
-    # eg. user.workspaces.create
+    Workspace.create(name: "New Workspace").tap do |workspace|
+      workspace.users << user
+    end
   end
 
   def send_welcome_email_to(user)
